@@ -1,0 +1,11 @@
+.container{
+    /* width: 600px; */
+    background-color: aqua;
+}
+
+@media screen and (min-width: 200px)  {
+    .container{
+        background-color: yellow;
+    }
+
+}

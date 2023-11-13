@@ -1,0 +1,60 @@
+/* div p{
+    color: aqua;
+} */
+
+/* div > p{
+    color: aqua;
+} */
+
+/* div + p{
+    color: aqua;
+} */
+div ~ p{
+    color: aqua;
+}
+
+/* unvisited link */
+a:link {
+    color: rgb(255, 183, 0);
+  }
+  
+  /* visited link */
+  a:visited {
+    color: green;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: hotpink;
+  }
+  
+  /* selected link */
+  a:active {
+    color: blue;
+  }
+
+  input:focus{
+    background-color: bisque;
+    color: blueviolet;
+  }
+
+  input.inpt:focus{
+    background-color: cadetblue;
+    color: yellowgreen;
+  } 
+
+  p.para::first-letter{
+    color: brown;
+    font-size: 40px;
+  }
+
+  h3.hdn::first-line{
+    color: blueviolet;
+  }
+  .spn{
+    color: yellow;
+  }
+
+  label.lbl::before{
+    content: "\26B9"
+  }

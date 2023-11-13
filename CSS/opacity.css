@@ -1,0 +1,73 @@
+img{
+    opacity: 0.5;
+}
+
+img:hover{
+    opacity: 1;
+}
+
+.verticle-line{
+    border-left: 4px solid blueviolet;
+    height: 500px;
+    position: absolute;
+    left: 410px;
+    top: 0px;
+}
+.list li{
+    display: inline-block;
+    list-style-type: disc;
+}
+
+/* table{
+    border: 1px solid black;
+}
+
+td{
+    border: 1px solid black;
+} */
+
+/* gouping of element (,)*/
+
+table,td,th {
+    border: 1px solid black;
+    
+    border-collapse: collapse;
+}
+
+.table-container{
+  font-size: 20px;
+  height: 300px;
+  width: 300px;
+  text-align: center;
+  margin: auto;
+}
+
+td{
+    background-color: aquamarine;
+}
+th{
+    background-color: rgb(52, 235, 39);
+}
+
+
+li {
+  display: inline-block;
+  padding: 2px 2px;
+ 
+}
+
+  ul li:before {
+    content: "\2022";
+  } 
+
+
+  .main{
+    background-image: url("D:/OctBatch2023/HTML/nature.jpg");
+    background-repeat: no-repeat;
+    width: 900px;
+    height: 900px;
+  }
+
+  .main:hover {
+    opacity: 0.5;
+  }

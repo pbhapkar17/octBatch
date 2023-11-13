@@ -1,0 +1,63 @@
+<form autocomplete ="off" >
+    <label> User Name </label><br>
+    <input type="text" maxlength="5" required minlength="2" name="userName"
+     > <br>
+    <label> Mobile No</label><br>
+    <input type="number"><br>
+    <label > email</label><br>
+    <input type="email" ><br>
+    <!-- Radio button: single selction only -->
+    <label> Gender</label><br>
+    <input type="radio" name="gender" id="male"> Male
+    <input type="radio" name="gender" id="female"> Female
+    <input type="radio" name="gender" id="other"> Other
+     
+    <br>
+    <!-- Checkbox : multiselection  -->
+    <lable>Hobbies</lable><br>
+   <input type="checkbox" id="painting"> Painting <br>
+   <input type="checkbox" id="dancing"> Dancing <br>
+   <input type="checkbox" id="swimming"> Swimming <br>
+   <br>
+    <label >number only</label><br>
+    <input type="text" pattern="[0-9]{10}$" maxlength="10" required value="9898989898" readonly><br>
+    <label>Name</label><br>
+    <input type="text" pattern="[a-zA-Z]{10}$" placeholder="enter your name here" maxlength="10" minlength="4">
+    <br>
+    <input type="hidden"> hidden input field br <!--to hide from UI--> <br>
+    <label >My School Name</label><br>
+    <input type="text" value="Ch. Shivaji maharaj english med school"><br><br>
+    <label > City </label><br>
+
+    <select>
+        <option value="Mumbai"> Mumbai </option>
+        <option value="Pune"> Pune</option>
+        <option value="Nashik"> Nashik</option>
+    </select>
+    
+    <select>
+        <option value="Mumbai"> Mumbai </option>
+        <option value="Pune" selected> Pune</option>
+        <option value="Nashik"> Nashik</option>
+    </select>
+   
+    <select >
+        <option value="" hidden></option>
+        <option value="Mumbai"> Mumbai </option>
+        <option value="Pune" > Pune</option>
+        <option value="Nashik"> Nashik</option>
+    </select>
+    <br><br>
+    <input type="date">
+
+    <br><br><br>
+    <button>Submit</button>
+    <!-- <input type="button" value="Submit"> -->
+</form>
+
+
+<h1 id="userName"> poonam</h1>
+<h2 id="surName">patil</h2>
+
+<input type="text" name="surName" value="patil"> : SurName
+<!-- {userName: "poonam",mobNo:656892659, surName:"jadhav", gender:"male"} name > to send form values to data base , id>> unique identity of element--> 
