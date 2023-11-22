@@ -18,3 +18,21 @@ console.log(typeof(amount));
 //string dt : ''/""
 let city = 'mumbai';
 console.log(typeof(city));
+
+//Boolean: true/false
+let isFavMovie = false //"true";//string
+console.log(typeof(isFavMovie));
+
+//undefined
+let a ;
+console.log(a);
+console.log(typeof(a));
+
+let b = "undefined";
+console.log(b);
+console.log(typeof(b));
+
+//var false = "poonam" // we can not declare reserved keywords as a variable name
+
+let r = "none" //string
+
