@@ -31,3 +31,23 @@ console.log(details.replaceAll(/mumbai/ig,"ppppp"));
 
 console.log(details.toUpperCase());
 console.log(details.toLowerCase());
+
+//concate
+
+let a = "pooja";
+let b = "jadhav";
+//let fullName = a.concat(b);
+let fullName = a.concat(' ',b);
+console.log('n>>',fullName);
+
+let text3 = "      Hello    World!      ";
+let text2 = text3.trim();
+console.log(text2);
+
+console.log(text3.trimEnd());
+console.log(text3.trimStart());
+
+let myBDate= "04/04/1992";
+var year = myBDate.split("/");
+console.log(year);
+console.log(year[2]);
