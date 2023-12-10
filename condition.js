@@ -114,3 +114,19 @@ if (e) {
 if (!e) { 
     console.log('eeeeeeeee');
 }
+// T &&  T >> T; F && T, T && F -->> F
+let mark = 50;
+if( mark == 50 && mark > 35 && mark > 45){
+    console.log("pass");
+}
+
+// T||F , F||T -->>T ; F||F>>F
+let x = 50;
+let y = 20;
+if(x > 50 || y !=20 || y > 10)  {
+console.log("jgkj");
+}
+
+if(empAge >= 18 && empAge <= 60){
+    console.log("legal emp");
+}
