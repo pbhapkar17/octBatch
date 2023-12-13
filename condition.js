@@ -137,16 +137,30 @@ function logicalOpertors() {
         console.log("jgkj");
     }
 }
-
+//parameterless fun
 function test() {
     console.log("fun clling");
 }
 
-
+//parametrised fun
 function userName(userName){
     console.log(userName);
 }
 
 function userPassword(userPass){
     console.log(userPass);
+}
+
+let a = 8;
+let b = 2;
+
+function multiplication(){
+   var res = a*b;
+   multiplication2(res)
+   
+}
+
+function multiplication2(result){
+     let res1 = 10 * result;
+     console.log(res1);
 }
