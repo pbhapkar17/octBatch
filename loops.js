@@ -96,3 +96,22 @@ let a = {
 
  let  g5 = {name : {name:"poo"}}
  console.log(g5.name.name);
+
+ //Arrow functions reduce the size of the code.
+//The return statement and function brackets are optional for single-line functions.
+//It increases the readability of the code.
+
+function test(){
+  return "Poonam";
+} 
+
+test = function(){
+  return "poonam";
+}
+
+test = () =>{
+  return "poonam"
+
+}
+
+test = () =>  "poonam";
