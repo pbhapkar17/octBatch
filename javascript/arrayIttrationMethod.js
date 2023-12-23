@@ -8,15 +8,23 @@ let a = [
     },
     {
         name: "ritu", city: "mumbai"
+    },
+    {
+        name: "ritu1", city: "mumbai"
+    },
+    {
+        name: "ritu2", city: "mumbai"
     }
 ]
 
 let names = [];
-// for (let index = 0; index < a.length; index++) {
-//     names.push(a[index].name)  
-// }
-
-
+for (let index = 0; index < a.length; index++) {
+    if(a[index].name =="ritu"){
+        break;
+    }
+    names.push(a[index].name)  
+}
+console.log(names);
 // a.forEach(item => {
 //     names.push(item.name)
 // })
@@ -32,3 +40,8 @@ n2 = a.filter(ele=>{
     }
 })
 console.log(n2);
+
+let val = a.find(ele=>{
+   return ele.name == 'ritu1'
+})
+console.log(val);
