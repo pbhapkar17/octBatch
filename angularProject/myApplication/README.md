@@ -13,3 +13,5 @@ to run project always open terminal on project folder : ng serve/ ng s / ng serv
 to resolve powershell unautherised issue : Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 after taking pull my branch if u want to run my code >> npm i then ng s -o
+
+compo: ng g c home
