@@ -7,13 +7,17 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { TestComponent } from './test/test.component';
+import { DirectiveComponent } from './directive/directive.component';
+
 
 @NgModule({
   declarations: [  //comopo/directive/pipe
     AppComponent,
     HomeComponent,
     DatabindingComponent,
-    TestComponent
+    TestComponent,
+    DirectiveComponent,
+   
   ],
   imports: [  //modules
     BrowserModule,
