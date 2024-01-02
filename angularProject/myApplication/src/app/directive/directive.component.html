@@ -3,3 +3,38 @@
 <div class="div-container" *ngIf="showDiv"></div>
 <br>
 <button (click)="toggle()">Toggle</button>
+
+<ul>
+    <li>COffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+    <li>COffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+    <li>COffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+</ul>
+
+<ul>
+    <li>{{listItem}}</li>
+</ul>
+
+<ul>
+    <li *ngFor="let data of listItem">{{data}}</li>
+</ul>
+
+
+<div>
+    <p *ngIf="color === 'pink'">i like pink</p>
+</div>
+
+
+<div [ngSwitch]="color">
+<p *ngSwitchCase="'pink'"> I like {{color}}</p>
+<p *ngSwitchCase="'yellow'"> I like {{color}}</p>
+<p *ngSwitchCase="'black'"> I like {{color}}</p>
+<p *ngSwitchCase="'purple'"> I like {{color}}</p>
+<p *ngSwitchDefault>i don't like color</p>
+</div>
+<br><br><br><br><br><br>

@@ -7,7 +7,10 @@ import { Component } from '@angular/core';
 })
 export class DirectiveComponent {
  showDiv : boolean = true;
-// Angular 8 directives can be classified in 3 categories based on how they behave:
+ listItem = ['COffee','Tea','Milk','COffee','Tea','Milk','COffee','Tea','Milk','COffee','Tea','Milk','COffee','Tea','Milk','COffee','Tea','Milk'];
+  color='black';
+
+ // Angular 8 directives can be classified in 3 categories based on how they behave:
 
 // Component Directives
 // Structural Directives
@@ -24,7 +27,7 @@ export class DirectiveComponent {
 // *ngSwitch Directive: The *ngSwitch allows us to Add/Remove DOM Element. It is similar 
 // to switch statement of C#.
 // *ngFor Directive: The *ngFor directive is used to repeat a portion of HTML template
-//  once per each item from an iterable list (Collection).
+//  once per each item from an iterable data .
 // Attribute Directives: Attribute directives are used to change the look and behavior
 //  of the DOM elements. For example: ngClass directive, and ngStyle directive etc.
 
