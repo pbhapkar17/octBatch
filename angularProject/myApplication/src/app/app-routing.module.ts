@@ -8,8 +8,10 @@ import { DirectiveComponent } from './directive/directive.component';
 const routes: Routes = [
   { path : "", component: HomeComponent},
   { path: "databiding", component:DatabindingComponent },
-  { path: "test" , component : TestComponent},
-  { path : 'directive', component : DirectiveComponent}
+  { path: "test", component : TestComponent},
+  { path : 'directive', component : DirectiveComponent},
+
+  { path : 'user', loadChildren:()=>import('./user/user.module').then(m=>m.UserModule)}
 ];
 
 @NgModule({
