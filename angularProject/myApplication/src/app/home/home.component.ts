@@ -19,5 +19,7 @@ constructor(private router : Router){}
   directiveCompo(){
     this.router.navigateByUrl('directive')
   }
-
+  adminMod(){
+    this.router.navigateByUrl('/admin/adminLanding')
+  }
 }
