@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { UserRoutingModule } from './user-routing.module';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { FormsModule } from '@angular/forms';
 console.log("user module...");
 
 
@@ -14,7 +15,8 @@ console.log("user module...");
   ],
   imports: [
     CommonModule,
-    UserRoutingModule
+    UserRoutingModule,
+    FormsModule
   ]
 })
 export class UserModule { }
