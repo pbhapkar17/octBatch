@@ -1,18 +1,40 @@
 <div class="form-container">
     <h2>Login Form</h2>
     <form #loginForm ="ngForm">
-        <label> UserName</label><br>
-        <input type="text" #userName="ngModel" ngModel name="uName" required>
-        <div *ngIf="userName?.errors?.['required']  && userName?.touched" 
-        class="error-msg">User Name is required</div>
-        <br>
-        <label> Password</label><br>
-        <input type="text" #pass="ngModel" ngModel name="password" required>
-        <div  *ngIf="pass.errors?.['required'] && pass?.touched" class="error-msg">
-            Password is required</div>
 
+        <label> UserName</label><br>
+
+        <input type="text" #userName="ngModel" ngModel name="uName" placeholder="Enter Username"
+         required pattern="^[a-zA-Z]*$" minlength="2" maxlength="20" [(ngModel)]="name">
+
+        <div *ngIf="userName?.errors?.['required'] && userName?.touched" class="error-msg">
+        User Name is required
+        </div>
+        <div  class="error-msg" *ngIf="userName?.errors?.['pattern'] && !userName?.errors?.['minlength']">
+            Username must be Alphabets
+        </div>
+        <div  class="error-msg" *ngIf="userName?.errors?.['minlength']" >
+            minimum 2 character are required
+        </div>
+        <br>
+
+        <label> Password</label><br>
+
+        <input type="text" #pass="ngModel" ngModel name="password" 
+         required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,12}$">
+       
+         <div  *ngIf="pass.errors?.['required'] && pass?.touched" class="error-msg">
+            Password is required
+        </div>
+        <div *ngIf="pass.errors?.['pattern']" class="error-msg">
+            Invalid Pattern
+        </div>
 
         <br><br>
         <button (click)="login(loginForm.value)" [disabled]="!loginForm.valid">Submit</button>
     </form>
 </div>
+<div class="container">
+    <!-- Content goes here -->
+  </div>
+  <i class="bi bi-eye-fill"></i>

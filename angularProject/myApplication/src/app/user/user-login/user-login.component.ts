@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class UserLoginComponent {
  
-
+name="Poonam"
   //Template driven : form fileds are less
   //reactive form : form fileds are more, need custom validation
 
