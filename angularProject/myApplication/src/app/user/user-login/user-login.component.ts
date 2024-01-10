@@ -7,12 +7,17 @@ import { Component } from '@angular/core';
 })
 export class UserLoginComponent {
  
-name="Poonam"
+name="Poonam";
+isShowPass = false;
   //Template driven : form fileds are less
   //reactive form : form fileds are more, need custom validation
 
   login(data:any){
    console.log(data);
    
+  }
+
+  toShowPassword() {
+    this.isShowPass = !this.isShowPass;
   }
 }

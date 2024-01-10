@@ -20,9 +20,12 @@
 
         <label> Password</label><br>
 
-        <input type="text" #pass="ngModel" ngModel name="password" 
+        <input [type]=" isShowPass ? 'text' : 'password' " #pass="ngModel" ngModel name="password" 
          required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,12}$">
-       
+        
+         <i class="bi bi-eye-fill eye-icon" *ngIf="isShowPass" (click)="toShowPassword()"></i>
+         <i class="bi bi-eye-slash-fill eye-icon2" *ngIf="!isShowPass"  (click)="toShowPassword()"></i>
+
          <div  *ngIf="pass.errors?.['required'] && pass?.touched" class="error-msg">
             Password is required
         </div>
@@ -34,7 +37,3 @@
         <button (click)="login(loginForm.value)" [disabled]="!loginForm.valid">Submit</button>
     </form>
 </div>
-<div class="container">
-    <!-- Content goes here -->
-  </div>
-  <i class="bi bi-eye-fill"></i>
