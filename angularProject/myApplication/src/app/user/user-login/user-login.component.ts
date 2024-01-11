@@ -14,6 +14,12 @@ isShowPass = false;
 
   login(data:any){
    console.log(data);
+  let userName = data.uName.replace(/\s+/g, ' ');
+  console.log(userName);
+   let request = {
+      "UserName" : userName,
+      "Password" : data.password
+   }
    
   }
 

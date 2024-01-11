@@ -5,7 +5,7 @@
         <label> UserName</label><br>
 
         <input type="text" #userName="ngModel" ngModel name="uName" placeholder="Enter Username"
-         required pattern="^[a-zA-Z]*$" minlength="2" maxlength="20" [(ngModel)]="name">
+         required pattern="^[a-zA-Z ]*$" minlength="2" maxlength="20" [(ngModel)]="name">
 
         <div *ngIf="userName?.errors?.['required'] && userName?.touched" class="error-msg">
         User Name is required
@@ -20,7 +20,8 @@
 
         <label> Password</label><br>
 
-        <input [type]=" isShowPass ? 'text' : 'password' " #pass="ngModel" ngModel name="password" 
+        <input [type]=" isShowPass ? 'text' : 'password' " #pass="ngModel" ngModel
+         name="password" 
          required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,12}$">
         
          <i class="bi bi-eye-fill eye-icon" *ngIf="isShowPass" (click)="toShowPassword()"></i>
@@ -36,4 +37,6 @@
         <br><br>
         <button (click)="login(loginForm.value)" [disabled]="!loginForm.valid">Submit</button>
     </form>
+     <a routerLink="/user/signUp">click here to create account..</a>
+
 </div>
