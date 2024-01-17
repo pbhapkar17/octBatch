@@ -7,28 +7,46 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./sign-up.component.css']
 })
 export class SignUpComponent {
-  
-  signUpForm! : FormGroup;
 
-  constructor( private formBuilder: FormBuilder){}
+  signUpForm!: FormGroup;
+  visible = false;
+  visibleConfirm = false;
+  isMatch = false;
+  constructor(private formBuilder: FormBuilder) { }
 
-  ngOnInit(){
+  ngOnInit() {
 
     this.formDetails();
 
   }
 
-  formDetails(){
+  formDetails() {
     this.signUpForm = this.formBuilder.group({
-      fullName:['',[Validators.required]],
-      mob:[null,[Validators.maxLength(10),Validators.pattern("^[0-9]*$")]],
-      gender:[],
-      pan:[],
-      password:[],
-      confirmPass:[]
+      fullName: ['', [Validators.required]],
+      mob: [null, [Validators.maxLength(10), Validators.pattern("^[0-9]*$")]],
+      gender: [],
+      pan: [],
+      password: [],
+      confirmPass: []
     })
   }
 
+  visiblePassword() {
+    this.visible = !this.visible;
+  }
 
+  visibleConfirmPassword() {
+    this.visibleConfirm = !this.visibleConfirm;
+  }
 
+  passMatch() {
+    if(this.signUpForm.value.confirmPass !=null ){
+      if (this.signUpForm.value.password == this.signUpForm.value.confirmPass ) {
+        this.isMatch = false
+      } else {
+        this.isMatch = true;
+      }
+    }
+   
+  }
 }

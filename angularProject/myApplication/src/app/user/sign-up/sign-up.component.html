@@ -38,19 +38,28 @@
         <mat-form-field class="form-fields">
             <mat-label>Pan card</mat-label>
             <input type="text" matInput formControlName="pan">
+            <mat-hint>Enter your Pan</mat-hint>
         </mat-form-field>
 
         <br>
         <mat-form-field class="form-fields">
             <mat-label>Password</mat-label>
-            <input type="text" matInput formControlName="password">
+            <input [type]=" visible ? 'text' : 'password'"
+             (keyup)="passMatch()" matInput formControlName="password">
+            <mat-icon matSuffix *ngIf="visible" (click)="visiblePassword()">visibility</mat-icon>
+            <mat-icon matSuffix *ngIf="!visible" (click)="visiblePassword()">visibility_off</mat-icon>
         </mat-form-field>
+        <!-- <mat-error *ngIf="isMatch">Password and Confirm password should match</mat-error> -->
 
         <br>
         <mat-form-field class="form-fields">
             <mat-label>Confirm Password</mat-label>
-            <input type="text" matInput formControlName="confirmPass">
+            <input type="text" [type]=" visibleConfirm ? 'text' : 'password'" 
+            (keyup)="passMatch()" matInput formControlName="confirmPass">
+            <mat-icon matSuffix *ngIf="visibleConfirm" (click)="visibleConfirmPassword()">visibility</mat-icon>
+            <mat-icon matSuffix *ngIf="!visibleConfirm" (click)="visibleConfirmPassword()">visibility_off</mat-icon>
         </mat-form-field>
+        <mat-error *ngIf="isMatch">Password and Confirm password should match</mat-error>
 
         <br>
         <button mat-raised-button color="accent" class="btn">Submit</button>
