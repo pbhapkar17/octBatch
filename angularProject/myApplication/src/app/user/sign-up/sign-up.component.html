@@ -8,7 +8,8 @@
 
             <mat-hint *ngIf="!signUpForm.get('fullName')?.touched"> Please enter your name here</mat-hint>
             <mat-error *ngIf="signUpForm.get('fullName')?.errors?.['required'] && signUpForm.get('fullName')?.touched"  >Full Name is required</mat-error>
-    
+            <mat-error *ngIf="signUpForm.get('fullName')?.errors?.['whiteSpaceError']">
+                 fullname should not include more than one space</mat-error>
         </mat-form-field>
        
         <br>
@@ -30,8 +31,8 @@
         <br>
         <mat-label>Gender</mat-label>
         <mat-radio-group formControlName="gender">
-            <mat-radio-button>Male</mat-radio-button>
-            <mat-radio-button>Female</mat-radio-button>
+            <mat-radio-button value="male">Male</mat-radio-button>
+            <mat-radio-button value="female">Female</mat-radio-button>
         </mat-radio-group>
 
         <br>
@@ -62,7 +63,10 @@
         <mat-error *ngIf="isMatch">Password and Confirm password should match</mat-error>
 
         <br>
-        <button mat-raised-button color="accent" class="btn">Submit</button>
+        <input type="checkbox" formControlName="tc"> I agree Terms and condions 
+        <br>
+        <button mat-raised-button color="accent" class="btn" (click)="submit()"
+         [disabled]="!signUpForm.valid">Submit</button>
 
     </form>
 </div>
