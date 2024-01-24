@@ -9,6 +9,8 @@ import { DatabindingComponent } from './databinding/databinding.component';
 import { TestComponent } from './test/test.component';
 import { DirectiveComponent } from './directive/directive.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 console.log('app module calling.........');
 
@@ -20,6 +22,8 @@ console.log('app module calling.........');
     DatabindingComponent,
     TestComponent,
     DirectiveComponent,
+    ParentComponent,
+    ChildComponent,
    
   ],
   imports: [  //modules
