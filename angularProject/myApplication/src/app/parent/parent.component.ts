@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class ParentComponent {
    city = 'Pune';
+   stateFromChild:any;
+   dataComingFromChild(data:any){
+    this.stateFromChild = data;
+   }
 }

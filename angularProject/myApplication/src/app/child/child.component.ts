@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -7,4 +7,10 @@ import { Component, Input } from '@angular/core';
 })
 export class ChildComponent {
   @Input() cityFromParent:any;
+  @Output() dataFromChild = new EventEmitter<any>() ;
+  state="MH-09";
+
+  dataFromChildParent(){
+    this.dataFromChild.emit(this.state);
+  }
 }  
