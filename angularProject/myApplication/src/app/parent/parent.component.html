@@ -3,4 +3,6 @@
 {{stateFromChild}}
 <br><br>
 ----------------------------------------------------------------
-<app-child [cityFromParent]='city' (dataFromChild)="dataComingFromChild($event)"></app-child>
+<app-child [cityFromParent]='city'
+          (dataFromChild)="dataComingFromChild($event)">
+</app-child>
