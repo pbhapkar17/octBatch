@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class PipeComponent {
 info = 'AACBV CGH zsdds dcnji';
 date1 = new Date();
+inputboxValue:any=''
 tableData = [
   {
    name : 'Poonam',
@@ -23,6 +24,16 @@ tableData = [
     name : 'Kirti',
     contact:78787878,
     city : "Pune"
+   },
+   {
+    name : 'Pooja',
+    contact:78787878,
+    city : "Pune"
+   },
+   {
+    name : 'Poonam',
+    contact:78787878,
+    city : "Mumbai"
    },
    {
     name : 'Pooja',

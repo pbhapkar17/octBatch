@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent {
 //constructor is a method which get invoked internally at the time of compo initialization 
-
+items=[1,3,4,5,6,7,89,22]
 constructor(private router : Router){}
 
 
