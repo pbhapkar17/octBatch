@@ -15,7 +15,7 @@
         <br>
         <mat-form-field class="form-fields">
             <mat-label>Mob No</mat-label>
-            <input type="text" matInput formControlName="mob">
+            <input type="text" matInput formControlName="mob" appNumbersOnly>
 
             <mat-hint>Please enter mob no </mat-hint>
             <mat-error *ngIf="signUpForm.get('mob')?.errors?.['maxlength'] && signUpForm.get('mob')?.touched"> 

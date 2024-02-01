@@ -8,7 +8,8 @@ import { Component } from '@angular/core';
 export class PipeComponent {
 info = 'AACBV CGH zsdds dcnji';
 date1 = new Date();
-inputboxValue:any=''
+inputboxValue:any='';
+searchValue :any
 tableData = [
   {
    name : 'Poonam',
@@ -46,4 +47,7 @@ tableData = [
     city : "Mumbai"
    },
 ]
+search(){
+this.searchValue = this.inputboxValue
+}
 }

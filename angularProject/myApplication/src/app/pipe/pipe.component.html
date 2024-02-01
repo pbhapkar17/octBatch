@@ -5,13 +5,14 @@
 
 {{date1 | date : 'short'}} -->
 <input type="search" [(ngModel)]="inputboxValue"> search here..
+<button (click)="search()"></button>
 <table >
     <tr>
         <th> Name</th>
         <th> Contact</th>
         <th> City</th>
     </tr>
-    <tr *ngFor="let data of tableData | search:inputboxValue"> 
+    <tr *ngFor="let data of tableData | search:searchValue"> 
        <td>{{data.name}}</td>
        <td>{{data.contact}}</td>
        <td>{{data.city}}</td>
