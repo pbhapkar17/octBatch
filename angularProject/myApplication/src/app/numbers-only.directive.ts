@@ -9,7 +9,6 @@ export class NumbersOnlyDirective {
 
   @HostListener('input', ['$event']) acceptNumOnly(event: any) {
 
-    //const initalValue = this.eleRef.nativeElement.value;
     this.eleRef.nativeElement.value = event.target.value.replace(/[^0-9]*/g, '');
 
 
