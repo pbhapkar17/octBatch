@@ -1,16 +1,18 @@
-import { Directive, HostListener } from '@angular/core';
-console.log('dir calng...');
+import { Directive, ElementRef, HostListener } from '@angular/core';
 
 @Directive({
   selector: '[appNumbersOnly]'
 })
 export class NumbersOnlyDirective {
 
-  constructor() { }
+  constructor(private eleRef: ElementRef) { }
 
-@HostListener('input',['$event']) acceptNumOnly(val:any){
-console.log('dir..', event);
+  @HostListener('input', ['$event']) acceptNumOnly(event: any) {
 
-}
+    //const initalValue = this.eleRef.nativeElement.value;
+    this.eleRef.nativeElement.value = event.target.value.replace(/[^0-9]*/g, '');
+
+
+  }
 
 }
