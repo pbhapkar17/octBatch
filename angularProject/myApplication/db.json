@@ -1,0 +1,36 @@
+{
+  "admin": [
+    {
+      "id": "934a",
+      "fullName": "Poonam Patil",
+      "mob": 989898999,
+      "gender": "female",
+      "pan": "ghty5655g",
+      "password": "poo@123",
+      "confirmPass": "poo@123",
+      "tc": true
+    },
+    {
+      "id": "a6fb",
+      "fullName": "Jay",
+      "mob": "555555",
+      "gender": "male",
+      "pan": "ghty5655g",
+      "password": "jay@123",
+      "confirmPass": "jay@123",
+      "tc": true
+    },
+    {
+      "id": "59a0",
+      "fullName": "neha Patil",
+      "mob": "44444",
+      "gender": "female",
+      "pan": "dfrt4567y",
+      "password": "neha@123",
+      "confirmPass": "neha@123",
+      "tc": true
+    }
+  ],
+  "owner": [],
+  "user": {}
+}

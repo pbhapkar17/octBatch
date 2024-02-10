@@ -14,6 +14,7 @@ import { ChildComponent } from './child/child.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { SearchPipe } from './search.pipe';
 import { SharedModule } from './shared/shared.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 console.log('app module calling.........');
@@ -38,7 +39,8 @@ console.log('app module calling.........');
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
