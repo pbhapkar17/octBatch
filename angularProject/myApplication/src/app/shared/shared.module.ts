@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NumbersOnlyDirective } from '../numbers-only.directive';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -9,10 +9,12 @@ import { NumbersOnlyDirective } from '../numbers-only.directive';
      NumbersOnlyDirective,
     ],
   imports: [
-    CommonModule
+    CommonModule,
+    HttpClientModule
   ],
   exports:[
-    NumbersOnlyDirective
+    NumbersOnlyDirective,
+    HttpClientModule
   ]
 })
 export class SharedModule { }

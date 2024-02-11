@@ -15,3 +15,12 @@ to resolve powershell unautherised issue : Set-ExecutionPolicy -ExecutionPolicy 
 after taking pull my branch if u want to run my code >> npm i then ng s -o
 
 compo: ng g c home
+
+CURD : Create Update Read Delete
+ Create :post - 
+ API call: import HttpClientModule into module.ts
+ create service : import HttpClient class into the service inject its dependancy into constructor.
+ create a common function to make API call, return response to the component.
+
+ component: call that api call  function into a component, with agruments .
+ subcribe the response given by the server.
