@@ -22,8 +22,8 @@
 
         <input [type]=" isShowPass ? 'text' : 'password' " #pass="ngModel" ngModel
          name="password" 
-         required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,12}$">
-        
+         required >
+        <!-- pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,12}$" -->
          <i class="bi bi-eye-fill eye-icon" *ngIf="isShowPass" (click)="toShowPassword()"></i>
          <i class="bi bi-eye-slash-fill eye-icon2" *ngIf="!isShowPass"  (click)="toShowPassword()"></i>
 
@@ -33,7 +33,9 @@
         <div *ngIf="pass.errors?.['pattern']" class="error-msg">
             Invalid Pattern
         </div>
-
+        <div *ngIf="isValid" class="error-msg">
+          Wrong UserName or password
+        </div>
         <br><br>
         <button (click)="login(loginForm.value)" [disabled]="!loginForm.valid">Submit</button>
     </form>

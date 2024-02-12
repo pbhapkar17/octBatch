@@ -55,15 +55,15 @@ export class SignUpComponent {
   }
   submit(){
     console.log('this.signUpForm.value',this.signUpForm.value);
-    let req = {
-      "full_Name" : this.signUpForm.value.fullName,
-      "mob_No" : this.signUpForm.value.mob,
-      "gender" : this.signUpForm.value.gender,
-      "pass": this.signUpForm.value.password,
-      "confirm_Pass":this.signUpForm.value.confirmPass,
-      "terms_cond":this.signUpForm.value.tc
-    }
-    this.apiCallService.postApiCall(req).subscribe(response => {
+    // let req = {
+    //   "full_Name" : this.signUpForm.value.fullName,
+    //   "mob_No" : this.signUpForm.value.mob,
+    //   "gender" : this.signUpForm.value.gender,
+    //   "pass": this.signUpForm.value.password,
+    //   "confirm_Pass":this.signUpForm.value.confirmPass,
+    //   "terms_cond":this.signUpForm.value.tc
+    // }
+    this.apiCallService.postApiCall(this.signUpForm.value).subscribe(response => {
      this.router.navigateByUrl('/user/userSucc')
     })
 

@@ -6,9 +6,13 @@ import { Injectable } from '@angular/core';
 })
 export class ApiCallService {
 
+
   constructor(private httpClient: HttpClient) { }
 
   postApiCall(formData:any){
    return this.httpClient.post("http://localhost:3000/admin",formData);
+  }
+  getUserData() {
+   return this.httpClient.get("http://localhost:3000/admin");
   }
 }
