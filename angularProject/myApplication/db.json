@@ -1,7 +1,7 @@
 {
   "admin": [
     {
-      "id": "934a",
+      "id": "1",
       "fullName": "Poonam Patil",
       "mob": 989898999,
       "gender": "female",
@@ -11,17 +11,7 @@
       "tc": true
     },
     {
-      "id": "a6fb",
-      "fullName": "Jay",
-      "mob": "555555",
-      "gender": "male",
-      "pan": "ghty5655g",
-      "password": "jay@123",
-      "confirmPass": "jay@123",
-      "tc": true
-    },
-    {
-      "id": "59a0",
+      "id": "3",
       "fullName": "neha Patil",
       "mob": "44444",
       "gender": "female",

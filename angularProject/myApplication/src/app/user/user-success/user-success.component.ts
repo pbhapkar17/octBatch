@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ApiCallService } from 'src/app/api-call.service';
 import { DataService } from 'src/app/data.service';
 
 @Component({
@@ -9,9 +10,16 @@ import { DataService } from 'src/app/data.service';
 })
 export class UserSuccessComponent {
  name:any;
-  constructor(private dataService : DataService, private router: Router){}
+ id:any;
+  constructor(private dataService : DataService, private router: Router, private apiCallService:ApiCallService){}
 
   ngOnInit(){
     this.name = this.dataService.userName;
+    this.id = this.dataService.id
+  }
+  accountDelete(){
+    this.apiCallService.deleteApiCall(this.id).subscribe(res=>{
+      
+    })
   }
 }

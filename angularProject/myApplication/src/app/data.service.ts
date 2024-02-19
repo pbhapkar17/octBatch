@@ -8,6 +8,7 @@ export class DataService {
 
   userName:any;
   studentData = new Subject<any>();
+  id: any;
   constructor() { }
 
   
